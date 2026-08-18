@@ -6,6 +6,8 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充',
+    reports: 'レポート',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -106,12 +108,14 @@ export default {
     title: '注文',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
+    submittedOrders: '提出済み注文',
     totalOrders: '総注文数',
     totalRevenue: '総収益',
     avgOrderValue: '平均注文額',
     onTimeDelivery: '定時配達',
     itemsCount: '{count}件',
     quantity: '数量',
+    leadTimeDays: '{days}日',
     table: {
       orderNumber: '注文番号',
       orderId: '注文ID',
@@ -125,7 +129,8 @@ export default {
       totalValue: '合計金額',
       status: 'ステータス',
       expectedDelivery: '予定配達日',
-      actualDelivery: '実際の配達日'
+      actualDelivery: '実際の配達日',
+      leadTime: 'リードタイム'
     }
   },
 
@@ -185,6 +190,50 @@ export default {
       change: '変化',
       trend: 'トレンド',
       period: '期間'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: '補充',
+    description: '需要と在庫レベルに基づいた予算内での補充提案を取得します',
+    budgetCard: {
+      title: '補充予算'
+    },
+    stats: {
+      totalRecommendedCost: '推奨合計コスト',
+      remainingBudget: '残り予算',
+      itemsFunded: '予算内の品目数'
+    },
+    recommendationsTitle: '補充提案',
+    table: {
+      sku: 'SKU',
+      itemName: '品目名',
+      warehouse: '倉庫',
+      category: 'カテゴリ',
+      quantityOnHand: '手持在庫数',
+      reorderPoint: '再注文点',
+      trend: 'トレンド',
+      unitCost: '単価',
+      recommendedQuantity: '推奨数量',
+      recommendedCost: '推奨コスト',
+      urgencyScore: '緊急度',
+      status: 'ステータス'
+    },
+    status: {
+      funded: '予算内',
+      unfunded: '予算外'
+    },
+    placeOrder: '注文する',
+    noItemsFunded: '現在の予算内に収まる品目がありません',
+    orderSuccess: '補充注文{orderNumber}が正常に作成されました',
+    dismiss: '閉じる',
+    modal: {
+      title: '補充注文の確認',
+      description: '以下の予算内の品目が推奨予算配分から注文されます。',
+      quantity: '数量',
+      total: '合計',
+      confirm: '注文を確定'
     }
   },
 
