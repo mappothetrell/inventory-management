@@ -6,6 +6,8 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
+    reports: 'Reports',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -106,12 +108,14 @@ export default {
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
+    submittedOrders: 'Submitted Orders',
     totalOrders: 'Total Orders',
     totalRevenue: 'Total Revenue',
     avgOrderValue: 'Avg Order Value',
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    leadTimeDays: '{days} days',
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -125,7 +129,8 @@ export default {
       totalValue: 'Total Value',
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
-      actualDelivery: 'Actual Delivery'
+      actualDelivery: 'Actual Delivery',
+      leadTime: 'Lead Time'
     }
   },
 
@@ -185,6 +190,83 @@ export default {
       change: 'Change',
       trend: 'Trend',
       period: 'Period'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Get budget-driven restocking recommendations based on demand and stock levels',
+    budgetCard: {
+      title: 'Restocking Budget'
+    },
+    stats: {
+      totalRecommendedCost: 'Total Recommended Cost',
+      remainingBudget: 'Remaining Budget',
+      itemsFunded: 'Items Funded'
+    },
+    recommendationsTitle: 'Restocking Recommendations',
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      warehouse: 'Warehouse',
+      category: 'Category',
+      quantityOnHand: 'Qty on Hand',
+      reorderPoint: 'Reorder Point',
+      trend: 'Trend',
+      unitCost: 'Unit Cost',
+      recommendedQuantity: 'Recommended Qty',
+      recommendedCost: 'Recommended Cost',
+      urgencyScore: 'Urgency',
+      status: 'Status'
+    },
+    status: {
+      funded: 'Funded',
+      unfunded: 'Unfunded'
+    },
+    placeOrder: 'Place Order',
+    noItemsFunded: 'No items fit within the current budget',
+    orderSuccess: 'Restocking order {orderNumber} was placed successfully',
+    dismiss: 'Dismiss',
+    modal: {
+      title: 'Confirm Restocking Order',
+      description: 'The following funded items will be ordered from your recommended budget allocation.',
+      quantity: 'Qty',
+      total: 'Total',
+      confirm: 'Confirm Order'
+    }
+  },
+
+  // Reports
+  reports: {
+    title: 'Performance Reports',
+    description: 'View quarterly performance metrics and monthly trends',
+    noData: 'No orders match the selected filters',
+    notApplicable: 'N/A',
+    quarterlyPerformance: {
+      title: 'Quarterly Performance',
+      quarter: 'Quarter',
+      totalOrders: 'Total Orders',
+      totalRevenue: 'Total Revenue',
+      avgOrderValue: 'Avg Order Value',
+      fulfillmentRate: 'Fulfillment Rate'
+    },
+    monthlyTrend: {
+      title: 'Monthly Revenue Trend'
+    },
+    monthOverMonth: {
+      title: 'Month-over-Month Analysis',
+      month: 'Month',
+      orders: 'Orders',
+      revenue: 'Revenue',
+      change: 'Change',
+      growthRate: 'Growth Rate'
+    },
+    summary: {
+      totalRevenueYTD: 'Total Revenue (YTD)',
+      avgMonthlyRevenue: 'Avg Monthly Revenue',
+      totalOrdersYTD: 'Total Orders (YTD)',
+      bestQuarter: 'Best Performing Quarter'
     }
   },
 

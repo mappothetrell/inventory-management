@@ -106,8 +106,19 @@ export default {
   border-bottom: 1px solid #e2e8f0;
   padding: 0.75rem 0;
   position: sticky;
-  top: 70px;
+  /* No more top nav bar above this - the sidebar lives to the left instead,
+     so the filter bar sticks to the very top of its scroll container. */
+  top: 0;
   z-index: 90;
+}
+
+@media (max-width: 768px) {
+  .filters-bar {
+    /* Leave room for the fixed mobile hamburger toggle rendered by
+       Sidebar.vue so it doesn't sit on top of the filter controls
+       on initial load. */
+    margin-top: 3.25rem;
+  }
 }
 
 .filters-container {
@@ -124,6 +135,18 @@ export default {
   align-items: center;
   gap: 1rem;
   flex: 1;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    padding: 0 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-select {
+    min-width: 0;
+  }
 }
 
 .filter-group {
